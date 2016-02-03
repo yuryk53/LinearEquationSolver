@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="_solver.Solve()">
+    <Position X="4.987" Y="1.677" Height="0.312" Width="1.127" />
+  </Comment>
+  <Class Name="SysLinearEqSolver.Program" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SysLinearEqSolver.EquationsSystem">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgARQAAAAEAAAAAAAIAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>EquationsSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_solver" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SysLinearEqSolver.EquationsSystemSolver">
+    <Position X="6.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EquationsSystemSolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SysLinearEqSolver.LinearEquationsSystem">
+    <Position X="3" Y="4" Width="2" />
+    <InheritanceLine Type="SysLinearEqSolver.EquationsSystem" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="3.526" />
+        <Point X="4" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinearEquationsSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SysLinearEqSolver.JacobiMethodSolver">
+    <Position X="5.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAEAAAAAAIAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>JacobiMethodSolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SysLinearEqSolver.GaussJordanSolver">
+    <Position X="8" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GaussJordanSolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SysLinearEqSolver.SqLinearEquationsSystem">
+    <Position X="3" Y="5.75" Width="2.25" />
+    <InheritanceLine Type="SysLinearEqSolver.LinearEquationsSystem" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="5.425" />
+        <Point X="4" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SqLinearEquationsSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -10,6 +10,18 @@ namespace SysLinearEqSolver
     {
         static void Main(string[] args)
         {
+            double[,] A = { {2,1},
+                             {5,7} };
+            double[] B = { 11, 13 };
+
+            double[] initialGuess = { 1, 1 };
+
+            EquationsSystem system = new SqLinearEquationsSystem(A, B);
+            JacobiMethodSolver solver = new JacobiMethodSolver(initialGuess);
+            system.Solver = solver;
+            system.Solve();
+
+            Console.WriteLine(system.PrintResults());
         }
     }
 }
