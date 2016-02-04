@@ -18,6 +18,7 @@ namespace SysLinearEqSolver
 
             EquationsSystem system = new SqLinearEquationsSystem(A, B);
             JacobiMethodSolver solver = new JacobiMethodSolver(initialGuess);
+ 
             system.Solver = solver;
             system.Solve();
 
