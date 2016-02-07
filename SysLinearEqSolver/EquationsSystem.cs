@@ -62,5 +62,12 @@ namespace SysLinearEqSolver
             }
             return resultString.ToString();
         }
+
+        public virtual double[] GetResultsArray()
+        {
+            double[] results = new double[_solver.Results.Length];
+            Array.Copy(_solver.Results, results, _solver.Results.Length);
+            return results;
+        }
     }
 }

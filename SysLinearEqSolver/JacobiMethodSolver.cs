@@ -23,6 +23,9 @@ namespace SysLinearEqSolver
         //https://en.wikipedia.org/wiki/Jacobi_method
         public override void Solve(double[][] A, double[] B)
         {
+            if (!IsConvergent(A))
+                throw new ArgumentException("Jacobi method diverges with this system!");
+
             if (_initialGuess != null)
             {
                 if (_initialGuess.Length != A.GetLength(0))
@@ -78,6 +81,31 @@ namespace SysLinearEqSolver
                 if (Math.Abs(res - B[i]) < _eps)
                     continue;
                 else return false;
+            }
+            return true;
+        }
+
+        //http://www.hpcc.unn.ru/?dir=1052
+        /// <summary>
+        /// Checks for sufficient condition for Jacobi method to converge
+        /// </summary>
+        /// <param name="A">matrix of conditions A</param>
+        /// <returns>true, if sufficient condition is satisfied and false - if not</returns>
+        private bool IsConvergent(double[][] A)
+        {
+            for (int i = 0; i < A.Length; i++)
+            {
+                double sum = 0;
+                for (int j = 0; j < A[i].Length; j++)
+                {
+                    if (i == j)
+                        continue;
+
+                    sum += Math.Abs(A[i][j]);
+                }
+
+                if (Math.Abs(A[i][i]) <= sum)
+                    return false; //sufficient condition is not satisfied
             }
             return true;
         }
