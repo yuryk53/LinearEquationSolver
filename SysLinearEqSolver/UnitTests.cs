@@ -14,10 +14,10 @@ namespace SysLinearEqSolverTests
         [TestMethod]
         public void TestMethod1()
         {
-            double[,] A = {  {10,-1,2, 0},
-                             {-1,11,-1, 3},
-                             {2,-1,10, -1},
-                             {0, 3,-1, 8}
+            double[,] A = {  {10, -1, 2,  0},
+                             {-1, 11,-1,  3},
+                             { 2, -1, 10,-1},
+                             { 0,  3, -1, 8}
                           };
             double[] B = { 6, 25, -11, 15 };
 
@@ -35,8 +35,9 @@ namespace SysLinearEqSolverTests
         [TestMethod]
         public void TestMethod2()
         {
-            double[,] A = { {2,1},
-                             {5,7} };
+            double[,] A = {  {2,1},
+                             {5,7} 
+                          };
             double[] B = { 11, 13 };
 
             double[] initialGuess = { 1, 1 };
@@ -56,8 +57,8 @@ namespace SysLinearEqSolverTests
         public void TestMethod3()
         {
             double[,] A = {  {10,1,2},
-                             {0,5,2},
-                             {4,8,15}
+                             { 0,5,2},
+                             { 4,8,15}
                           };
             double[] B = { 3, 1, -1 };
 

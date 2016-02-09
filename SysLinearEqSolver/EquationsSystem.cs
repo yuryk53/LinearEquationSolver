@@ -36,7 +36,7 @@ namespace SysLinearEqSolver
         {
             if (_solver != null)
             {
-                _solver.Solve(_coefficients, _rightSight);
+                _solver.Solve((double[][])_coefficients.Clone(), (double[])_rightSight.Clone());
             }
             else throw new NullReferenceException("EquationsSystemSolver 'Solver' instance is not set!");
         }
